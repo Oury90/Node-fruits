@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <title>Recipies</title>
+</head>
+<body>
+    <div class="big-title">
+        <h1>Benefits 🥗</h1>
+    </div>
+    <div class="form-container">
+        <form action="/" method="post" >
+            <button class="btn" type="submit" value="tomate" name="choice">🍅</button>
+            <button class="btn" type="submit" value="citron" name="choice">🍋</button>
+            <button class="btn" type="submit" value="pomme" name="choice">🍎</button>
+        </form>
+    </div>
+    <div class="recip-container">
+        <%if(locals.result){%>
+            <div class="resul-container">
+                <h1><%= result.name %></h1>
+                <ul>
+                    <li><%= result.benefits %></li>
+                </ul>
+            </div>
+        <%}else{%>
+            <p class="resul-container">Click 👆🏽</p>
+        <%}%>
+    </div>
+</body>
+</html>
